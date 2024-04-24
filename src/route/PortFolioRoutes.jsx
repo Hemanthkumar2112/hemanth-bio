@@ -1,23 +1,20 @@
 import React from "react";
 import { Routes, Route ,Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import Home from "../screens/Home";
+import YourComponent from "../screens/YourComponent";
 
 
 const PortFolioRoutes = () => {
 
-    
 
-    if(Cookies.get(import.meta.env.VITE_APP_USER_COOKIE_KEY_NAME) === undefined){
-        window.location.href = import.meta.env.VITE_APP_LOGIN_URL;
-    }
 
     return (
         <React.Fragment>
             <Routes>
-                <Route exact path="/" element={<App  />} />
-                {/* <Route exact path="/mine" element={<App />} />
-                <Route exact path="/blog" element={<App />} />
-                <Route exact path="/contact" element={<App />} /> */}
+                <Route exact path="/" element={<Home  />} />
+                <Route exact path="/test" element={<YourComponent  />} />
+
                 <Route path="/*"  element={ <Navigate  to="/" /> }/>
             </Routes>
         </React.Fragment>
