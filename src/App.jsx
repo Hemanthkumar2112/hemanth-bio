@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next'
 import { setInnerDimentions } from './redux/InnerDimentionSlice'
 import PortFolioRoutes from './route/PortFolioRoutes'
 import './assets/css/styles.css'
+import './App.module.scss';
+
 
 function App() {
   const [count, setCount] = useState(0)

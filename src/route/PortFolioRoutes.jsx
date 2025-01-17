@@ -3,6 +3,7 @@ import { Routes, Route ,Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Home from "../screens/Home";
 import YourComponent from "../screens/YourComponent";
+import BaseLayout from "../components/BaseLayout";
 
 
 const PortFolioRoutes = () => {
@@ -11,12 +12,13 @@ const PortFolioRoutes = () => {
 
     return (
         <React.Fragment>
-            <Routes>
+            {/* <Routes>
                 <Route exact path="/" element={<Home  />} />
                 <Route exact path="/test" element={<YourComponent  />} />
 
                 <Route path="/*"  element={ <Navigate  to="/" /> }/>
-            </Routes>
+            </Routes> */}
+            <BaseLayout />
         </React.Fragment>
     )
 }
